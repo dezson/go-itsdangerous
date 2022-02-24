@@ -14,7 +14,7 @@ import (
 	"time"
 )
 
-// 2011/01/01 in UTC
+// EPOCH 2011/01/01 in UTC
 const EPOCH = 1293840000
 
 // Encodes a single string. The resulting string is safe for putting into URLs.

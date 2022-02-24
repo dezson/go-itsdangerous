@@ -101,7 +101,7 @@ func (s *Signature) Unsign(signed string) (string, error) {
 	li := strings.LastIndex(signed, s.Sep)
 	value, sig := signed[:li], signed[li+len(s.Sep):]
 
-	if ok, _ := s.Verify(value, sig); ok == true {
+	if ok, _ := s.Verify(value, sig); ok {
 		return value, nil
 	}
 	return "", fmt.Errorf("signature %s does not match", sig)
